@@ -7,7 +7,7 @@ var connectionString = builder.Configuration.GetConnectionString("DashboardDemoC
 builder.Services.AddDbContext<DashboardDemoContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<DashboardDemoContext>();
 
 // Add services to the container.
