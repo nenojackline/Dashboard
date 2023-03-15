@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using DashboardDemo.Areas.Identity.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DashboardDemo.Data;
 
-public class DashboardDemoContext : IdentityDbContext<IdentityUser>
+public class DashboardDemoContext : IdentityDbContext<Users>
 {
     public DashboardDemoContext(DbContextOptions<DashboardDemoContext> options)
         : base(options)

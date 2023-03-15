@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace DashboardDemo.Areas.Identity.Data
 {
-    public class Users
+    public class Users : IdentityUser
     {
         [Required]
         [Display(Name = "First Name")]
@@ -13,5 +13,6 @@ namespace DashboardDemo.Areas.Identity.Data
         [Required]
         [Display(Name = "Last Name")]
         public string? LastName { get; set; }
+
     }
 }
